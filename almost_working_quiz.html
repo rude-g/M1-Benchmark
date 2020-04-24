@@ -3,6 +3,15 @@
     <head>
         <title>Are you really a Slytherin?</title>
         <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1 {
+                background-color: violet;
+            }
+            p {
+                font-weight: bold;
+            }
             div {
                 display: flex;
                 flex-direction: column;
@@ -10,17 +19,21 @@
                 align-items: center;
             }
             .greenery {
-                background-color: green;
+                background-color: black;
                 height: 100px;
                 width: 200px;
                 border-radius: 50px;
+                border: solid 3px violet;
                 color: white;
             }
             .result {
-                background-color: indigo;
-                height: 100px;
-                width: 100px;
-                border-radius: 50px;
+                background-color: violet;
+                border: solid 3px black;
+                height: 200px;
+                width: 200px;
+                border-radius: 100px;
+                font-size: large;
+                font-weight: bold;
             }
         </style>
     </head>
@@ -104,16 +117,16 @@
 
             function sortingHat(){
                 if(score >= 33){
-                    console.log("Score:" + score + ". Congrats! You are a Slytherin!")
+                    alert("Score:" + score + ". Congrats! You are a Slytherin!")
                 }
                 else if(score >= 21 && score < 33) {
-                    console.log("Score:" + score + ". Sorry, you are a Ravenclaw.")
+                    alert("Score:" + score + ". Sorry, you are a Ravenclaw.")
                 }
                 else if(score >= 14 && score < 21) {
-                    console.log("Score:" + score + ". Sorry, you are a Hufflepuff.")
+                    alert("Score:" + score + ". Sorry, you are a Hufflepuff.")
                 }
                 else {
-                    console.log("Score:" + score + ". Sorry, you are a Gryffindor.")
+                    alert("Score:" + score + ". Sorry, you are a Gryffindor.")
                 }
             }
         </script>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Are you really a Slytherin?</title>
+        <style>
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .greenery {
+                background-color: green;
+                height: 100px;
+                width: 200px;
+                border-radius: 50px;
+                color: white;
+            }
+            .result {
+                background-color: indigo;
+                height: 100px;
+                width: 100px;
+                border-radius: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Are you really a Slytherin?</h1>
+        
+        <div id="question1">
+            <p>How did you find out about Hogwarts?</p>
+            <button class="greenery" onclick="answerC()">From my parents</button>
+            <button class="greenery" onclick="answerB()">From an owl</button>
+            <button class="greenery" onclick="answerA()">I read about it in books and media</button>
+            <button class="greenery" onclick="answerD()">How did you find out about planet Earth?</button>
+        </div>
+        <div id="question2">
+            <p>What did you do last summer?</p>
+            <button class="greenery" onclick="answerA()">I was close to nature</button>
+            <button class="greenery" onclick="answerB()">Had adventures, as always</button>
+            <button class="greenery" onclick="answerD()">Summer, Fall, Spring... Why do we label things?</button>
+            <button class="greenery" onclick="answerC()">I enjoed things which are not avaliable during other seasons</button>
+        </div>
+        <div id="question3">
+            <p>What is your type of sport?</p>
+            <button class="greenery" onclick="answerB()">Poker</button>
+            <button class="greenery" onclick="answerD()">Quidditch</button>
+            <button class="greenery" onclick="answerC()">Any teamsport!</button>
+            <button class="greenery" onclick="answerA()">Sport? I'd rather not go...</button>
+        </div>
+        <div id="question4">
+            <p>Pick a word</p>
+            <button class="greenery" onclick="answerA()">Garden</button>
+            <button class="greenery" onclick="answerC()">Bridge</button>
+            <button class="greenery" onclick="answerB()">Station</button>
+            <button class="greenery" onclick="answerD()">Forest</button>
+        </div>
+        <div id="question5">
+            <p>And what is the thing with the Gryffindor?</p>
+            <button class="greenery" onclick="answerD()">They make me smile</button>
+            <button class="greenery" onclick="answerC()">Yet another faculty</button>
+            <button class="greenery" onclick="answerA()">Yeah, what is the thing?</button>
+            <button class="greenery" onclick="answerB()">Peculiarly lucky guys</button>
+        </div>
+        <div id="question6">
+            <p>Who was the greatest?</p>
+            <button class="greenery" onclick="answerA()">Scamander</button>
+            <button class="greenery" onclick="answerC()">Grindelwald</button>
+            <button class="greenery" onclick="answerB()">Dumbledore</button>
+            <button class="greenery" onclick="answerD()">Ekrizdis</button>
+        </div>
+        <div id="question7">
+            <p>And the last question...</p>
+            <button class="greenery" onclick="answerD()">Finally</button>
+            <button class="greenery" onclick="answerA()">Then here goes the last answer</button>
+            <button class="greenery" onclick="answerC()">I don't think I got it</button>
+            <button class="greenery" onclick="answerB()">...is always the same</button>
+        </div>
+        <div>
+            <button class="result" onclick="sortingHat()">See the result</button>
+        </div>
+        <script>
+            var score = 0
+
+            function answerA() {
+                score = score + 2;
+                console.log(score);
+            }
+
+            function answerB() {
+                score = score + 1;
+                console.log(score);
+            }
+
+            function answerC() {
+                score = score + 3;
+                console.log(score);
+            }
+
+            function answerD() {
+                score = score + 5
+                console.log(score)
+            }
+
+            function sortingHat(){
+                if(score >= 33){
+                    console.log("Score:" + score + ". Congrats! You are a Slytherin!")
+                }
+                else if(score >= 21 && score < 33) {
+                    console.log("Score:" + score + ". Sorry, you are a Ravenclaw.")
+                }
+                else if(score >= 14 && score < 21) {
+                    console.log("Score:" + score + ". Sorry, you are a Hufflepuff.")
+                }
+                else {
+                    console.log("Score:" + score + ". Sorry, you are a Gryffindor.")
+                }
+            }
+        </script>
+    </body>
+</html>
